@@ -1,7 +1,6 @@
 *.pdf
 .vscode/
 0.1.0/
-examples/
 
 # macOS specific files
 .DS_Store

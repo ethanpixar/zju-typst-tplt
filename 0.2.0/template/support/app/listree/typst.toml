@@ -1,0 +1,11 @@
+[package]
+name = "listree"
+version = "0.1.0"
+entrypoint = 'src/lib.typ'
+authors = ["QuadnucYard"]
+description = "Convert lists to trees easily"
+keywords = ["list", "tree"]
+categories = ["model", "layout", "utility"]
+compiler = "0.13.0"
+
+[tool]

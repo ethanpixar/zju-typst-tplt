@@ -1,0 +1,15 @@
+*.pdf
+.vscode/
+0.1.0/
+
+# macOS specific files
+.DS_Store
+.Trashes
+.Spotlight-V100
+.fseventsd
+.localized
+.AppleDouble
+.LSOverride
+Icon*
+
+info.json

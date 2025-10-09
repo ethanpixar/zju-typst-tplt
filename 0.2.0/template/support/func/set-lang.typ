@@ -1,6 +1,6 @@
 #import "@preview/numbly:0.1.0": numbly
 
-#let set-lang(english, first-line-indent-all: true, doc) = if english {
+#let set-lang(english, first-line-indent-all: true, first-line-indent-amount: 2em, doc) = if english {
   set heading(
     numbering: numbly(
       "{1:I}.",
@@ -13,7 +13,7 @@
   )
   set par(
     first-line-indent: (
-      amount: 1.5em,
+      amount: first-line-indent-amount,
     ),
   )
   set outline(depth: 2)
@@ -36,7 +36,7 @@
   set par(
     justify: true,
     first-line-indent: (
-      amount: 2em,
+      amount: first-line-indent-amount,
       all: first-line-indent-all,
     ),
   )

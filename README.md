@@ -110,7 +110,7 @@ Typst 是一款现代化的排版语言，类似 LaTeX，但各方面都更好�
 
     ps：这个路径在 macOS 下的地址为 `/Users/ethanpixar/Library/Application Support/typst/packages/local/`。
 
-    另注：我为了在日后使用时方便，并没有使用 `zju-typst-tplt` 作为模版文件夹名，而是将其缩减为了 `tplt`，故在使用模版时的导入为 `@local/tplt:0.2.0`；如果你不希望改模版名字，可以把 `@local/tplt:0.2.0` 改为 `@local/zju-typst-tplt:0.2.0`，并修改 `zju-typst-tplt/0.2.0/typst.toml` 中的 `name` 字段为 `"zju-typst-tplt"`。
+    另注：我为了在日后使用时方便，并没有使用 `zju-typst-tplt` 作为模版名和文件夹名，而是将模版文件夹重命名为了 `tplt`，故在使用模版的导入语句为 `@local/tplt:0.2.0`；如果你不希望改模版名字，可以把导入语句中的 `@local/tplt:0.2.0` 改为 `@local/zju-typst-tplt:0.2.0`，**同时修改**目录 `zju-typst-tplt/0.2.0/typst.toml` 中的 `name` 字段为 `"zju-typst-tplt"`。即导入语句、模版文件夹名、`typst.toml` 中的 `name` 字段三者需保持一致。
 
 完成以上步骤后，在任意目录下新建 `xxx.typ`，都可以使用该模板，在 `xxx.typ` 文件开头输入：
 
@@ -142,6 +142,25 @@ Typst 是一款现代化的排版语言，类似 LaTeX，但各方面都更好�
 ## 使用示例
 
 参见 `examples/` 目录下的示例
+
+```
+examples
+├── article-习概
+│   └──  习概参观感悟.typ  ------------短文模版示例
+├── hw-BIP
+│   ├── hw1
+│   │   └── BIP_hw1.typ  ------------图片、表格（三线表）和方程组、矩阵
+│   ├── hw3
+│   │   └── BIP_hw3.typ  ------------数学公式
+│   └── hw6
+│       └── BIP_hw6.typ  ------------声明块见首行；代码块见1/(2)；
+│                                    自定义表格见2
+└── report
+    ├── 电设-lab1
+    │   └── ESD_lab1_final.typ ------报告模版示例：封面、提纲、图片编号
+    └── Network-proj
+        └── report.typ  -------------完整报告
+```
 
 ## 常用模块
 

@@ -19,5 +19,5 @@
     },
     footer: context basic-footer(english: english),
   )
-  set-lang(english, first-line-indent-all: false, doc)
+  set-lang(english, doc)
 }

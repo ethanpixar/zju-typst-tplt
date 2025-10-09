@@ -110,10 +110,12 @@ Typst 是一款现代化的排版语言，类似 LaTeX，但各方面都更好�
 
     ps：这个路径在 macOS 下的地址为 `/Users/ethanpixar/Library/Application Support/typst/packages/local/`。
 
+    另注：我为了在日后使用时方便，并没有使用 `zju-typst-tplt` 作为模版文件夹名，而是将其缩减为了 `tplt`，故在使用模版时的导入为 `@local/tplt:0.2.0`；如果你不希望改模版名字，可以把 `@local/tplt:0.2.0` 改为 `@local/zju-typst-tplt:0.2.0`，并修改 `zju-typst-tplt/0.2.0/typst.toml` 中的 `name` 字段为 `"zju-typst-tplt"`。
+
 完成以上步骤后，在任意目录下新建 `xxx.typ`，都可以使用该模板，在 `xxx.typ` 文件开头输入：
 
 ```typst
-#import "@local/zju-typst-tplt:0.2.0": *
+#import "@local/tplt:0.2.0": * // 或者 @local/zju-typst-tplt:0.2.0 视你上一步命名而定
 
 #show: BL // 基本样式，务必首先使用
 // 定义文件信息

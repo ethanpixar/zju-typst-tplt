@@ -13,6 +13,7 @@ Typst 是一款现代化的排版语言，类似 LaTeX，但各方面都更好�
 与LaTeX相比，Typst 具有以下优势：
 
 1. 数学公式部分非常简洁，可以对比以下的例子：
+
     $$
     \text{Prewitt}(+45\degree) = \begin{bmatrix}
       -1 & -1 & 0 \\
@@ -20,6 +21,7 @@ Typst 是一款现代化的排版语言，类似 LaTeX，但各方面都更好�
       0 & 1 & 1
     \end{bmatrix}
     $$
+
     LaTeX:
 
     ```latex

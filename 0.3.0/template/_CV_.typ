@@ -34,7 +34,7 @@
   // header & footer
 
   set page(
-    margin: (x: 1.1cm, top: 2cm, bottom: 1.1cm),
+    margin: (x: 1.1cm, top: 2cm, bottom: 0.5cm),
     header: context if counter(page).get().first() == 1 {
       v(35pt)
       grid(

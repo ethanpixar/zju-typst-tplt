@@ -13,10 +13,10 @@
   },
 )
 
-#let problem-counter = counter("problems")
-#let problem(order, body) = {
-  problem-counter.step()
-  context if problem-counter.get().at(0) != 1 { v(10pt) } else { v(1pt) }
+#let question-counter = counter("questions")
+#let question(order, body) = {
+  question-counter.step()
+  context if question-counter.get().at(0) != 1 { v(10pt) } else { v(1pt) }
   block(
     width: 100%,
     radius: 6pt,
@@ -28,7 +28,7 @@
       grid(
         columns: 2,
         column-gutter: 5pt,
-        strong[#context { problem-counter.get().at(0) }], body,
+        strong[#context { question-counter.get().at(0) }], body,
       )
     } else {
       grid(

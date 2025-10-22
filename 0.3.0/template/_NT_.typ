@@ -36,20 +36,6 @@
   )
 }
 
-#let printer(english: false, doc) = {
-  set text(size: 12pt)
-  set page(
-    margin: (x: 1.2cm, top: 1.2cm, bottom: 1.8cm),
-    footer-descent: 30%,
-    paper: "a3",
-    flipped: true,
-    columns: 2,
-    footer: context basic-footer(english: english),
-  )
-  set columns(gutter: 1.2cm)
-  doc
-}
-
 // ------------------- Main template ---------------------
 #let NT(
   title: none,
@@ -163,12 +149,12 @@
   if show-printer {
     set text(size: 12pt)
     set page(
-      margin: (x: 1.2cm, top: 1.2cm, bottom: 1.8cm),
+      margin: (x: 1.2cm, top: 1.5cm, bottom: 1.2cm),
       footer-descent: 30%,
       paper: "a3",
       flipped: true,
       columns: 2,
-      footer: context basic-footer(english: english),
+      header: context basic-footer(english: english),
     )
     set columns(gutter: 1.2cm)
 

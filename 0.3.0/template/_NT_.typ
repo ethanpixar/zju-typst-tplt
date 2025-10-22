@@ -1,6 +1,6 @@
 #import "support/basic-settings.typ": *
 
-#import "@preview/cheq:0.2.2": checklist
+#import "@preview/cheq:0.3.0": checklist
 
 // FUNCTION
 

@@ -1,25 +1,25 @@
 #import "support/basic-settings.typ": *
 
 #let entry(a, b, c) = {
-  v(2pt)
+  v(-2pt)
   set text(weight: 600, 11pt)
   grid(
     columns: (1fr, 80pt, 100pt),
     align: (left + horizon, center + horizon, right + horizon),
     a, b, c,
   )
-  v(-2pt)
+  v(-4pt)
 }
 
-#let entry2(a, b) = {
-  v(2pt)
+#let entry2(a, c) = {
+  v(-2pt)
   set text(weight: 600, 11pt)
   grid(
     columns: (1fr, 100pt),
     align: (left + horizon, right + horizon),
-    a, b,
+    a, c,
   )
-  v(-2pt)
+  v(-4pt)
 }
 
 #let out-image(image, height, extra-space: 0em) = box(inset: -height / 2, image, height: extra-space, width: height)
@@ -38,10 +38,12 @@
   set text(size: 10pt, font: sans-nt)
 
   show heading.where(level: 1): it => {
+    v(-5pt)
     set text(font: sans-nt, 14pt, rgb("#020e269f"), weight: 600)
     it
     v(-5pt)
     line(length: 100%, stroke: (thickness: 2pt, paint: rgb("#8c93b5af"), cap: "round"))
+    v(2pt)
   }
 
   // header & footer
@@ -89,9 +91,9 @@
       image("profile-cv.png")
     },
   )
-  v(-30pt)
+  v(-25pt)
   if description != none {
-    v(-40pt)
+    v(-45pt)
     text(14pt, weight: 600, if english [#text(rgb("#020e269f"))[Applying for:] #job] else [#text(
         rgb("#020e269f"),
       )[应聘意向：]#job])

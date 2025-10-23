@@ -46,6 +46,16 @@
     text(font: "PingFang SC")["]
   }
 
+  show "'": it => {
+    text(font: "PingFang SC")[']
+  }
+  show "‘": it => {
+    text(font: "PingFang SC")[‘]
+  }
+  show "’": it => {
+    text(font: "PingFang SC")[’]
+  }
+
   set par(
     justify: true,
   )

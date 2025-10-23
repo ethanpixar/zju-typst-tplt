@@ -45,6 +45,7 @@
   show-printer: false,
   optimized: false, // To optimize the page size for content
   minimum-width: 21cm, // Default minimum width (an A4 paper)
+  first-line-indent: false,
   doc,
 ) = {
   set text(font: sans-nt)
@@ -159,9 +160,9 @@
     set columns(gutter: 1.2cm)
 
     note-title(title: title, ymd: ymd)
-    set-lang-nt(english, doc)
+    set-lang-nt(first-line-indent, english, doc)
   } else {
     note-title(title: title, ymd: ymd)
-    set-lang-nt(english, doc)
+    set-lang-nt(first-line-indent, english, doc)
   }
 }

@@ -1,6 +1,6 @@
 #import "@preview/numbly:0.1.0": numbly
 
-#let set-lang-nt(english, doc) = if english {
+#let set-lang-nt(first-line-indent, english, doc) = if english {
   set heading(
     numbering: numbly(
       "{1:I}.",
@@ -11,11 +11,14 @@
       "{6:a}.",
     ),
   )
-  set par(
-    first-line-indent: (
-      amount: 1.5em,
-    ),
-  )
+  if first-line-indent {
+    set par(
+      first-line-indent: (
+        amount: 1.5em,
+      ),
+    )
+    doc
+  }
   doc
 } else {
   show heading: it => {
@@ -32,11 +35,9 @@
       "{6:a}. ",
     ),
   )
+
   set par(
     justify: true,
-    first-line-indent: (
-      amount: 2em,
-    ),
   )
   set text(lang: "zh", region: "cn")
   set figure.caption(separator: [ -- ])
@@ -44,6 +45,15 @@
     show "、": "、" + h(-0.5em)
     show " ": none
     it
+  }
+
+  if first-line-indent {
+    set par(
+      first-line-indent: (
+        amount: 2em,
+      ),
+    )
+    doc
   }
   doc
 }

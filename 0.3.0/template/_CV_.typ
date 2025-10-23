@@ -24,8 +24,6 @@
 
 #let out-image(image, height, extra-space: 0em) = box(inset: -height / 2, image, height: extra-space, width: height)
 
-#let q = text(font: "PingFang SC")["]
-
 // ------------------- Main template ---------------------
 // Even if the name is CV, it is actually a template for work resume.
 #let CV(
@@ -99,5 +97,16 @@
       )[应聘意向：]#job])
     box(description, width: 83%)
   }
-  doc
+  if not english {
+    show "\"": it => {
+      text(font: "PingFang SC")["]
+    }
+    show "“": it => {
+      text(font: "PingFang SC")["]
+    }
+    show "”": it => {
+      text(font: "PingFang SC")["]
+    }
+    doc
+  } else { doc }
 }

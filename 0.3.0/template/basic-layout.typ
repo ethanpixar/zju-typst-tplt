@@ -34,7 +34,7 @@
   set enum(
     full: true,
     numbering: numbly(
-      "({1})",
+      "({1:1})",
       "{2:①}",
       "{3:a}.",
       "{4:i}.",

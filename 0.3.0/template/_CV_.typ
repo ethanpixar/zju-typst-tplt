@@ -85,7 +85,11 @@
         if english [#text(rgb("#020e269f"))[Applying for:] #job] else [#text(rgb("#020e269f"))[应聘意向：]#job]
       } else [　])
     ],
-    if description == none { image("profile-cv-transparent.png") } else { image("profile-cv.png") },
+    {
+      if description == none { v(-20pt) }
+
+      image("profile-cv.png")
+    },
   )
   v(-30pt)
   if description != none {

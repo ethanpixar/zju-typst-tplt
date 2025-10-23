@@ -24,7 +24,7 @@
 
 #let out-image(image, height, extra-space: 0em) = box(inset: -height / 2, image, height: extra-space, width: height)
 
-#let mm = text(font: "PingFang SC")["]
+#let q = text(font: "PingFang SC")["]
 
 // ------------------- Main template ---------------------
 // Even if the name is CV, it is actually a template for work resume.

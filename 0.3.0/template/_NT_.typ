@@ -12,12 +12,40 @@
 #let insert-date-nt(ymd, fill: rgb("#2d115676")) = if ymd != none { secenter(insert-date-nt0(ymd, fill: fill)) }
 
 
-#let note-title(title: none, ymd: none) = {
+#let note-title(english, title: none, ymd: none) = {
   // Title
-  if title != none {
-    v(10pt)
-    secenter(text(20pt, rgb("#2d1156d0"), weight: "semibold", title))
+  if english != none {
+    show "\"": it => {
+      text(font: "PingFang SC")["]
+    }
+    show "“": it => {
+      text(font: "PingFang SC")["]
+    }
+    show "”": it => {
+      text(font: "PingFang SC")["]
+    }
+
+    show "'": it => {
+      text(font: "PingFang SC")[']
+    }
+    show "‘": it => {
+      text(font: "PingFang SC")[‘]
+    }
+    show "’": it => {
+      text(font: "PingFang SC")[’]
+    }
+
+    if title != none {
+      v(10pt)
+      secenter(text(20pt, rgb("#2d1156d0"), weight: "semibold", title))
+    }
+  } else {
+    if title != none {
+      v(10pt)
+      secenter(text(20pt, rgb("#2d1156d0"), weight: "semibold", title))
+    }
   }
+
   // date
   insert-date-nt(ymd)
 }
@@ -159,10 +187,10 @@
     )
     set columns(gutter: 1.2cm)
 
-    note-title(title: title, ymd: ymd)
+    note-title(english, title: title, ymd: ymd)
     set-lang-nt(first-line-indent, english, doc)
   } else {
-    note-title(title: title, ymd: ymd)
+    note-title(english, title: title, ymd: ymd)
     set-lang-nt(first-line-indent, english, doc)
   }
 }

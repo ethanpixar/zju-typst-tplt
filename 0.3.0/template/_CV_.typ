@@ -88,7 +88,7 @@
     {
       if description == none { v(-20pt) }
 
-      image("profile-cv.png")
+      image("headshot.png")
     },
   )
   v(-25pt)

@@ -1,6 +1,6 @@
 # ZJU Typst 模版
 
-Typst 模版，适用于浙江大学各类文档、作业、报告等场景。
+Typst 模版，适用于浙江大学各类文档、作业、报告、个人简历等场景。
 
 ## 关于 Typst
 
@@ -80,6 +80,7 @@ Typst 是一款现代化的排版语言，类似 LaTeX，但各方面都更好�
 - Report：报告模版
 - Article：文章模版
 - Note：笔记模版
+- Resume：个人简历
 
 **模版预览**
 
@@ -91,12 +92,18 @@ Typst 是一款现代化的排版语言，类似 LaTeX，但各方面都更好�
 | ---------------------------- | --- | ----------------------------- |
 | ![hw](images/hw.jpg) |![hw2](images/hw2.jpg) | ![at](images/at.jpg)  |
 
+个人简历模板
+
+| 个人简历 | 个人简历 |
+| ---------------------------- | --- |
+| ![cv](images/cv.png) |![cv2](images/cv-2.png) |
+
 ## 使用方法
 
 1. 使用 VS Code 打开仓库
 2. VS Code 中安装 Tinymist Typst 插件
 3. 把 `info-example.json` 文件中的信息为你自己的相关信息，并重命名为 `info.json`。
-4. 在文件 `zju-typst-tplt/0.2.0/template/support/list/fonts.typ`，可以看到字体列表：
+4. 在文件 `zju-typst-tplt/0.3.0/template/support/list/fonts.typ`，可以看到字体列表：
 
     ```typst
     #let ensans = "SF Pro Display" // 英文无衬线体
@@ -112,12 +119,21 @@ Typst 是一款现代化的排版语言，类似 LaTeX，但各方面都更好�
 
     ps：这个路径在 macOS 下的地址为 `/Users/ethanpixar/Library/Application Support/typst/packages/local/`。
 
-    另注：我为了在日后使用时方便，并没有使用 `zju-typst-tplt` 作为模版名和文件夹名，而是将模版文件夹重命名为了 `tplt`，故在使用模版的导入语句为 `@local/tplt:0.2.0`；如果你不希望改模版名字，可以把导入语句中的 `@local/tplt:0.2.0` 改为 `@local/zju-typst-tplt:0.2.0`，**同时修改**目录 `zju-typst-tplt/0.2.0/typst.toml` 中的 `name` 字段为 `"zju-typst-tplt"`。即导入语句、模版文件夹名、`typst.toml` 中的 `name` 字段三者需保持一致。
+    另注：我为了在日后使用时方便，并没有使用 `zju-typst-tplt` 作为模版名和文件夹名，而是将模版文件夹重命名为了 `tplt`，故在使用模版的导入语句为 `@local/tplt:0.3.0`；如果你不希望改模版名字，可以把导入语句中的 `@local/tplt:0.3.0` 改为 `@local/zju-typst-tplt:0.3.0`，**同时修改**目录 `zju-typst-tplt/0.3.0/typst.toml` 中的 `name` 字段为 `"zju-typst-tplt"`。
+
+    即：
+    - 导入语句、
+    - 模版文件夹名、
+    - `typst.toml` 中的 `name` 字段
+
+    以上三者需保持一致。
+
+6. 使用个人简历模版前，需把 `zju-typst-tplt/0.3.0/template/headshot-example.png` 替换为你自己的头像图片，并重命名为 `headshot.png`。
 
 完成以上步骤后，在任意目录下新建 `xxx.typ`，都可以使用该模板，在 `xxx.typ` 文件开头输入：
 
 ```typst
-#import "@local/tplt:0.2.0": * // 或者 @local/zju-typst-tplt:0.2.0 视你上一步命名而定
+#import "@local/tplt:0.3.0": * // 或者 @local/zju-typst-tplt:0.3.0 视你上一步命名而定
 
 #show: BL // 基本样式，务必首先使用
 // 定义文件信息
@@ -125,7 +141,7 @@ Typst 是一款现代化的排版语言，类似 LaTeX，但各方面都更好�
 #let course = "Biomedical Image Processing" // 课程名称
 #let proj-name = "Homework 3" // 作业/项目名称
 
-// 具体模版，可以选择 HW(Homework), NT(Note), RP(Report), AR(Article)
+// 具体模版，可以选择 HW(Homework), NT(Note), RP(Report), AR(Article), CV(Resume)
 #show: HW.with( 
     proj-name: proj-name,
     course: course,
@@ -149,6 +165,8 @@ Typst 是一款现代化的排版语言，类似 LaTeX，但各方面都更好�
 examples
 ├── article-习概
 │   └──  习概参观感悟.typ  ------------短文模版示例
+├── cv
+│   └── cv.typ           ------------个人简历示例
 ├── hw-BIP
 │   ├── hw1
 │   │   └── BIP_hw1.typ  ------------图片、表格（三线表）和方程组、矩阵

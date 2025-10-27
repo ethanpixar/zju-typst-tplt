@@ -60,8 +60,16 @@
       zju-cover-grid([学#h(0.5em)生#h(0.5em)一：], students.at(0))
       zju-cover-grid([学#h(0.5em)生#h(0.5em)二：], students.at(1))
     } else {
+      let students_list = []
+      for value in students {
+        if value != students.last() {
+          students_list = students_list + value + [、]
+        } else {
+          students_list = students_list + value
+        }
+      }
       zju-cover-grid([组　　长：], leader)
-      zju-cover-grid([成　　员：], students)
+      zju-cover-grid([成　　员：], students_list)
     }
     zju-cover-grid([学　　院：], school)
     zju-cover-grid([专　　业：], major)
@@ -83,5 +91,5 @@
   proj-name: [项目名称],
   student-count: 3,
   leader: [龚玉传],
-  students: [华宇杰, 包博文],
+  students: ("华宇杰", "包博文"),
 )

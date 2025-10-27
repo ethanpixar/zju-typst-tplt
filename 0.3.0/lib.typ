@@ -2,6 +2,7 @@
 
 #import "template/exp-info-chart.typ": *
 #import "template/zju-cover.typ": *
+#import "template/zju-paper-cover.typ": *
 
 #import "template/basic-layout.typ": *
 

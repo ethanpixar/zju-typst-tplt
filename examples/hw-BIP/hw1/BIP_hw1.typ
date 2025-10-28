@@ -1,4 +1,4 @@
-#import "@local/tplt:0.2.0": *
+#import "@local/tplt:0.3.0": *
 
 #show: BL.with(is-table-cell-stroked: false)
 #let ymd = "today"
@@ -12,7 +12,7 @@
   ymd: ymd,
 )
 
-#problem(1)[
+#question(1)[
   Given the histogram of a grayscale image, apply the histogram equalization algorithm to enhance the image's contrast.
   #figure(image("pics/1.png"))
 ]
@@ -62,7 +62,7 @@ Eventually giving:
 which is a histogram equalized image as followed:
 #figure(image("code/1.svg"))
 
-#problem(2)[
+#question(2)[
   Given two random variables R and Z with the following probability density functions (PDFs):
   - R has a PDF: $p_r (r) = 2r$
   - Z has a PDF: $p_z (z) = 3z^2$
@@ -83,7 +83,7 @@ $
 $
 when $z=0$, $r=0$, $C=0$, which gives $ z = r^(2/3) $
 
-#problem(3)[
+#question(3)[
   Triangle A's vertices are in the position $(1,0)$, $(2,0)$ and $(2,0.5)$, design a list of affine transformation matrices to transform the triangle A to triangle B, which's vertices are in $(1,1.5)$, $(2,0.5)$ and $(2.5,1)$ respectively.
   #figure(image("pics/3.png"))
   After that, give the inverse transformation matrices list to transform the triangle B to triangle A.

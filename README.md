@@ -43,9 +43,7 @@ Typst 是一款现代化的排版语言，类似 LaTeX，但各方面都更好�
     ```
 
 2. 语法现代，清晰易懂。Typst 采用函数式结构，所有模块都可以轻松复用，并且可以很方便地参数传递。
-
 3. 性能极佳。Typst 使用 Rust 语言编写，编译速度非常快，且内存占用低，预览毫无延迟。
-
 4. 使用方便，文件清爽。可以通过 VS Code 插件直接使用；Typst 使用单一文件进行编写，便于管理。
 
 与 Word 等传统排版工具相比，Typst 具有以下优势：
@@ -80,7 +78,7 @@ Typst 是一款现代化的排版语言，类似 LaTeX，但各方面都更好�
 - Report：报告模版
 - Article：文章模版
 - Note：笔记模版
-- Resume：个人简历
+- CV：个人简历
 
 **模版预览**
 
@@ -89,13 +87,13 @@ Typst 是一款现代化的排版语言，类似 LaTeX，但各方面都更好�
 | ![rp1](images/report.jpg) | ![rp2](images/report2.jpg) | ![rp3](images/rp3.jpg) |
 
 | 作业模版 | 作业模版 | 短文模版 |
-| ---------------------------- | --- | ----------------------------- |
+| ---------------------------- | -------------------------- | ----------------------------- |
 | ![hw](images/hw.jpg) |![hw2](images/hw2.jpg) | ![at](images/at.jpg)  |
 
 个人简历模板
 
-| 个人简历 | 个人简历 |
-| ---------------------------- | --- |
+| 带描述 | 无描述 |
+| ----- | ----- |
 | ![cv](images/cv.png) |![cv2](images/cv-2.png) |
 
 ## 使用方法
@@ -115,18 +113,15 @@ Typst 是一款现代化的排版语言，类似 LaTeX，但各方面都更好�
 
     [字体包下载链接（使用浙大云盘）](https://pan.zju.edu.cn/share/cf92632a20a38535870a92f2e0)
 
-5. 把 `zju-typst-tplt` 放在 Typst 指定的本地模版目录下，该目录需通过 VS Code 命令面板 `Cmd + Shift + P` 输入 `Typst: Create Local Packages` 在这个目录下先创建一个模版文件夹，打开这个文件夹的位置，再把 `zju-typst-tplt` 拷贝到这个名为 `local` 的文件夹中（原来创建的模版文件夹也就没用了，之后可以通过 `Typst: Open Local Packages` 来打开这个模版）。
+5. 把 `zju-typst-tplt` 放在 Typst 指定的本地模版目录下，该目录需通过 VS Code 命令面板 `Cmd + Shift + P` 输入 `Typst: Create Local Packages` 在这个目录下先创建一个模版文件夹，打开这个文件夹的位置，再把 `zju-typst-tplt` 拷贝到这个名为 `local` 的文件夹中（原来创建的模版文件夹也就没用了，之后可以通过 `Typst: Open Local Packages` 命令来打开你的本地模版库）。
 
-    ps：这个路径在 macOS 下的地址为 `/Users/ethanpixar/Library/Application Support/typst/packages/local/`。
+    ps：这个路径在 macOS 下的地址为 `/Users/<username>/Library/Application Support/typst/packages/local/`。
 
-    另注：我为了在日后使用时方便，并没有使用 `zju-typst-tplt` 作为模版名和文件夹名，而是将模版文件夹重命名为了 `tplt`，故在使用模版的导入语句为 `@local/tplt:0.3.0`；如果你不希望改模版名字，可以把导入语句中的 `@local/tplt:0.3.0` 改为 `@local/zju-typst-tplt:0.3.0`，**同时修改**目录 `zju-typst-tplt/0.3.0/typst.toml` 中的 `name` 字段为 `"zju-typst-tplt"`。
-
-    即：
-    - 导入语句、
-    - 模版文件夹名、
-    - `typst.toml` 中的 `name` 字段
-
-    以上三者需保持一致。
+    另注：我为了在日后使用时方便，并没有使用 `zju-typst-tplt` 作为模版名和文件夹名，而是将模版文件夹重命名为了 `tplt`，故在使用模版的导入语句为 `@local/tplt:0.3.0`；如果你想修改模版名字，需注意修改以下三处：
+    1. 导入语句中的 `@local/zju-typst-tplt:0.3.0`
+    2. 目录 `zju-typst-tplt/0.3.0/typst.toml` 中的 `name` 字段
+    3. 模版文件夹 `zju-typst-tplt` 的名字
+    以上三者保持一致时才能正确识别模版。
 
 6. 使用个人简历模版前，需把 `zju-typst-tplt/0.3.0/template/headshot-example.png` 替换为你自己的头像图片，并重命名为 `headshot.png`。
 
@@ -141,7 +136,7 @@ Typst 是一款现代化的排版语言，类似 LaTeX，但各方面都更好�
 #let course = "Biomedical Image Processing" // 课程名称
 #let proj-name = "Homework 3" // 作业/项目名称
 
-// 具体模版，可以选择 HW(Homework), NT(Note), RP(Report), AR(Article), CV(Resume)
+// 具体模版，可以选择 HW(Homework), NT(Note), RP(Report), AR(Article), CV
 #show: HW.with( 
     proj-name: proj-name,
     course: course,
@@ -154,7 +149,6 @@ Typst 是一款现代化的排版语言，类似 LaTeX，但各方面都更好�
 
 - 使用快捷键 `Cmd + K, V` 进行预览。
 - 代码编辑器最上方的 `Export PDF` 可以导出 PDF。
-
 - 使用命令面板 `Cmd + Shift + P`，输入 `Typst` 查看更多指令。
 
 ## 使用示例
@@ -176,26 +170,28 @@ examples
 │       └── BIP_hw6.typ  ------------声明块见首行；代码块见1/(2)；
 │                                    自定义表格见2
 └── report
+    ├── Network-proj
+    │   └── report.typ  -------------作者为一人：完整报告
     ├── 电设-lab1
-    │   └── ESD_lab1_final.typ ------报告模版示例：封面、提纲、图片编号
-    └── Network-proj
-        └── report.typ  -------------完整报告
+    │   └── ESD_lab1_final.typ ------作者为两人：封面、提纲、图片编号
+    └── summer-section.typ ----------作者为五人/多人
 ```
 
 ## 常用模块
 
-1. 使用
+1. 插入代码块：
 
     ```typst
     #codex(read("code/xxx.py"), lang: "python")
     ```
 
-    来插入代码块
-
-2. 使用
+2. 插入图片：
 
     ```typst
     #figure(image("pic/xxx.png/jpeg/svg", width: ?%), caption: [图片标题])
     ```
 
-    来插入图片
+3. `ymd` 日期参数接受三种值：
+    - `"2025-1-1"`：具体日期字符串
+    - `"today"`：表示今天的日期
+    - `none`：不显示日期

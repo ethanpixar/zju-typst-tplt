@@ -1,4 +1,4 @@
-#import "@local/tplt:0.2.0": *
+#import "@local/tplt:0.3.0": *
 
 #show: BL
 

@@ -1,4 +1,4 @@
-#import "@local/tplt:0.2.0": *
+#import "@local/tplt:0.3.0": *
 
 #show: BL
 #let ymd = "2025-04-8"
@@ -16,7 +16,7 @@
   Properties used is mainly referred to Gemini 2.0 Flash Thinking Experimental. It is really helpful and efficient for me to catch up with all the properties needed for this homework.
 ]
 
-#problem(1)[Consider a linear, position invariant image degradation system with impulse response
+#question(1)[Consider a linear, position invariant image degradation system with impulse response
   $
     h(p, q) = e^(-(p^2 + q^2))
   $
@@ -27,7 +27,7 @@
 ]
 #ANSWER
 
-$g(x, y)$ is the convolution of $f(x, y)$ and $h(x, y)$, while $h(x, y)$ is basically a Gaussian function. The problem asks me to calculate the convolution of a delta function with a Gaussian function which intuitively gives a Gaussian function. Let me proof it:
+$g(x, y)$ is the convolution of $f(x, y)$ and $h(x, y)$, while $h(x, y)$ is basically a Gaussian function. The question asks me to calculate the convolution of a delta function with a Gaussian function which intuitively gives a Gaussian function. Let me proof it:
 $
   g(x, y) & = integral.double^oo_(-oo)f(alpha, beta)dot h(x - alpha, y - beta)dif alpha dif beta \
           & = integral.double^oo_(-oo)delta(alpha - a)dot exp{-((x - alpha)^2 + (y - beta)^2)}dif alpha dif beta \
@@ -55,7 +55,7 @@ $
 $
 This indicates a Gaussian function of $x$ only, with the result being constant with respect to $y$.
 
-#problem(2)[
+#question(2)[
   Assume that we have noisy image $g_i (x, y)$ from the image $f(x, y)$, i.e.
   $
     g_i (x, y) = f(x, y) + eta_i (x, y)
@@ -124,7 +124,7 @@ $
 
 
 
-#problem(3)[
+#question(3)[
   Suppose an image's degradation function is the convolution of original image and $ h(x, y) = (x^2 + y^2 - 2 sigma^2) / sigma^4 exp{-(x^2 + y^2) / (2 sigma^2)} $ and here assume $x, y$ are continuous.
   1. Prove that the degradation in frequency filed is
     $

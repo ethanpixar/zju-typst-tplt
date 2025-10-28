@@ -1,4 +1,4 @@
-#import "@local/tplt:0.2.0": *
+#import "@local/tplt:0.3.0": *
 #show: BL
 
 #let course = [网络技术]
@@ -29,7 +29,7 @@
 #h0[摘　要]
 本报告详细阐述了一个基于Python语言开发的局域网安全态势感知与可视化平台的设计与实现。该平台旨在解决传统局域网环境设备管理不便、网络状态不透明的问题。通过综合运用 ARP广播进行设备发现、多线程TCP Socket进行端口探测、ICMP协议进行网络延迟检测等底层网络技术，并结合Flask轻量级Web框架和前端动态可视化技术，项目成功实现了一个可通过浏览器访问的、直观的、实时的网络监控仪表盘。用户能够一键扫描并识别局域网内的所有活动设备，查看其IP/MAC地址、硬件厂商、开放端口及网络延迟等关键信息。
 
-项目访问链接：#link("https://github.com/EthanPixar/lan-scanner")
+项目访问链接：#link("https://github.com/ethanpixar/lan-scanner")
 
 #outline()
 

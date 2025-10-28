@@ -1,4 +1,4 @@
-#import "@local/tplt:0.2.0": *
+#import "@local/tplt:0.3.0": *
 
 #show: BL.with(is-table-cell-stroked: true)
 
@@ -17,7 +17,7 @@
   Gemini 2.5 Pro and Cursor are used to help with this homework.
 ]
 
-#problem(1)[
+#question(1)[
   First order feature
   + Given the image $bI$, calculate it's the energy, mean, range and 2nd, 3rd moment of mean.
 
@@ -47,15 +47,15 @@
     $
   + 2nd Moment of Mean:
     $
-      mu_2 &= (sum_i sum_j (I(i,j) - mu)^2) / N\
-      &=( 3 times (3-1)^2 + 4 times (2-1)^2 + 8 times (1-1)^2 + 10 times (0-1)^2 ) / 25 \
-      &= 26 / 25 = 1.04
+      mu_2 & = (sum_i sum_j (I(i,j) - mu)^2) / N \
+           & =( 3 times (3-1)^2 + 4 times (2-1)^2 + 8 times (1-1)^2 + 10 times (0-1)^2 ) / 25 \
+           & = 26 / 25 = 1.04
     $
   + 3rd Moment of Mean:
     $
-      mu_3 &= (sum_i sum_j (I(i,j) - mu)^3) / N\
-      &=( 3 times (3-1)^3 + 4 times (2-1)^3 + 8 times (1-1)^3 + 10 times (0-1)^3 ) / 25 \
-      &= -18 / 25 = -0.72
+      mu_3 & = (sum_i sum_j (I(i,j) - mu)^3) / N \
+           & =( 3 times (3-1)^3 + 4 times (2-1)^3 + 8 times (1-1)^3 + 10 times (0-1)^3 ) / 25 \
+           & = -18 / 25 = -0.72
     $
 + Using a python code:
   #codex(read("p1.py"), lang: "python")
@@ -63,7 +63,7 @@
   #figure(image("f1.png"), caption: [Histogram of the image $bI$])
   and prints #codex(read("terminal.txt")) in the terminal.
 
-#problem(2)[Co-occurrence matrix\
+#question(2)[Co-occurrence matrix\
   Find the co-occurrence matrix of a matrix pattern in the following cases:
   1. The position operator $Q$ is defined as "one pixel to the right"
   2. The position operator $Q$ is defined as "two pixels to the right"
@@ -87,7 +87,7 @@
         [0], [], [], [],
         [1], [], [], [],
         [2], [], [], [],
-        table.hline()
+        table.hline(),
       )
       GLCM Pattern
     ],
@@ -100,7 +100,7 @@
     [0], [--], [3], [--],
     [1], [3], [--], [8],
     [2], [--], [8], [--],
-    table.hline()
+    table.hline(),
   )
 
 + #table(
@@ -109,7 +109,7 @@
     [0], [--], [--], [3],
     [1], [--], [7], [--],
     [2], [3], [--], [2],
-    table.hline()
+    table.hline(),
   )
 + + For the GLCM of (1):
     + Contrast:
@@ -131,7 +131,7 @@
       $
 
 
-#problem(3)[CNN\
+#question(3)[CNN\
   Calculate the following results in sequence, showing the main calculation steps:
   + Convolution Output (C): Calculate the result after convolving the input matrix $bI$ with the kernel $bK$
   + ReLU Activation Output (R): Apply the ReLU activation function to the convolution output $bC$

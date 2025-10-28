@@ -176,7 +176,7 @@ examples
     │   └── report.typ  -------------作者为一人：完整报告
     ├── 电设-lab1
     │   └── ESD_lab1_final.typ ------作者为两人：封面、提纲、图片编号
-    └── summer-section.typ ----------作者为五人/多人
+    └── summer-section.typ ----------作者为多人
 ```
 
 ## 常用模块

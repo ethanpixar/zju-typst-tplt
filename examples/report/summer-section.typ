@@ -23,6 +23,90 @@
   course: course,
   proj-name: proj-name,
 )
+= 以下展示几种报告信息的格式
+== 个人报告：仅显示组员姓名
+=== 人数 $>=$ 3 `classmate-count: 3`
+#v(20pt)
+
+#exp-info-chart(
+  titled: false, //为方便展示，取消标题
+  course: course,
+  exp-cate: "综合项目开发",
+  teacher: teacher,
+  exp-name: proj-name,
+
+  classmate-count: 4,
+  classmates: [XXX，XXX，XXX，XXX],
+
+  where: [玉泉创客中心],
+  ymd: ymd,
+)
+
+=== 人数 $<=$ 3 `classmate-count: 2`
+#v(20pt)
+#exp-info-chart(
+  titled: false, //为方便展示，取消标题
+  course: course,
+  exp-cate: "综合项目开发",
+  teacher: teacher,
+  exp-name: proj-name,
+
+  classmate-count: 2,
+  classmates: [XXX，XXX],
+
+  where: [玉泉创客中心],
+  ymd: ymd,
+)
+
+== 小组报告：显示组员详细信息
+=== 显示成员头衔 `is-student-titled: true`
+#v(20pt)
+#exp-info-chart(
+  titled: false,
+  course: course,
+  exp-cate: "综合项目开发",
+  teacher: teacher,
+
+  exp-name: proj-name,
+
+  student-count: 5,
+  is-student-titled: true,
+  students: (
+    ([组#h(2em);长], "XXX", "32X010XXXX", "生物医学工程"),
+    ([组#h(0.5em);员#h(0.5em);一], "XXX", "32X010XXXX", "生物医学工程"),
+    ([组#h(0.5em);员#h(0.5em);二], "XXX", "32X010XXXX", "生物医学工程"),
+    ([组#h(0.5em);员#h(0.5em);三], "XXX", "32X010XXXX", "生物医学工程"),
+    ([组#h(0.5em);员#h(0.5em);四], "XXX", "32X010XXXX", "生物医学工程"),
+  ),
+
+  where: [玉泉创客中心],
+  ymd: ymd,
+)
+
+=== 无成员头衔 `is-student-titled: false`
+#v(20pt)
+#exp-info-chart(
+  titled: false,
+  course: course,
+  exp-cate: "综合项目开发",
+  teacher: teacher,
+
+  exp-name: proj-name,
+
+  student-count: 5,
+  students: (
+    ("XXX", "32X010XXXX", "生物医学工程"),
+    ("XXX", "32X010XXXX", "生物医学工程"),
+    ("XXX", "32X010XXXX", "生物医学工程"),
+    ("XXX", "32X010XXXX", "生物医学工程"),
+    ("XXX", "32X010XXXX", "生物医学工程"),
+  ),
+
+  where: [玉泉创客中心],
+  ymd: ymd,
+)
+
+#pagebreak()
 
 #exp-info-chart(
   course: course,

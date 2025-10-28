@@ -118,9 +118,11 @@ Typst 是一款现代化的排版语言，类似 LaTeX，但各方面都更好�
     ps：这个路径在 macOS 下的地址为 `/Users/<username>/Library/Application Support/typst/packages/local/`。
 
     另注：我为了在日后使用时方便，并没有使用 `zju-typst-tplt` 作为模版名和文件夹名，而是将模版文件夹重命名为了 `tplt`，故在使用模版的导入语句为 `@local/tplt:0.3.0`；如果你想修改模版名字，需注意修改以下三处：
+
     1. 导入语句中的 `@local/zju-typst-tplt:0.3.0`
     2. 目录 `zju-typst-tplt/0.3.0/typst.toml` 中的 `name` 字段
     3. 模版文件夹 `zju-typst-tplt` 的名字
+
     以上三者保持一致时才能正确识别模版。
 
 6. 使用个人简历模版前，需把 `zju-typst-tplt/0.3.0/template/headshot-example.png` 替换为你自己的头像图片，并重命名为 `headshot.png`。
